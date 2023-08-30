@@ -33,3 +33,13 @@ def car(request, id):
     if request.method == 'GET':
         serializer = CarSerializer(car)
         return Response(serializer.data)
+    
+@api_view(['GET'])
+def search(request, query):
+    try:
+        cars = list(Car.objects.filter(title__icontains=query).values())
+    except:
+        pass
+
+    if request.method == 'GET':
+        return JsonResponse(cars, safe=False)
