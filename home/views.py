@@ -21,3 +21,15 @@ def cars(request):
 
     if request.method == 'GET':
         return JsonResponse(cars, safe=False)
+    
+    
+@api_view(['GET'])
+def car(request, id):
+    try:
+        car = get_object_or_404(Car, id=id) 
+    except:
+        pass
+
+    if request.method == 'GET':
+        serializer = CarSerializer(car)
+        return Response(serializer.data)
