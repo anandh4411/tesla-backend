@@ -28,6 +28,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['tesla-vzl8.onrender.com']
 CSRF_TRUSTED_ORIGINS = ['https://tesla-vzl8.onrender.com', 'https://tesla-vzl8.onrender.com/admin']
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = [
+    'https://tesla-frontend-iafxzoazi-anandh4411.vercel.app',
+]
 
 
 # Application definition
