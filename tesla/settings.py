@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-h5ie4zyjc$7hu^=s_e738hyw9as56j2njyfz9#0r%p8og*5t0o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://tesla-vzl8.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://tesla-vzl8.onrender.com', 'https://tesla-vzl8.onrender.com/admin']
 CORS_ORIGIN_ALLOW_ALL = True
 
 
